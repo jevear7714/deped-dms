@@ -1,0 +1,63 @@
+ :root {
+  --dashboard-navy: #163a70; --dashboard-blue: #2563eb; --dashboard-bg: #f5f7fb;
+  --dashboard-ink: #172b4d; --dashboard-muted: #667085; --dashboard-line: #e4e9f1;
+  --dashboard-shadow: 0 4px 18px rgba(23,43,77,.06);
+}
+.dashboard-page { min-width: 0; padding: 30px 34px 48px; color: var(--dashboard-ink); font: 14px/1.45 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+.dashboard-page * { box-sizing: border-box; }
+.dashboard-heading { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:25px; }
+.dashboard-heading h1 { margin:12px 0 6px; font-size:27px; letter-spacing:-.7px; }
+.dashboard-heading p, .panel-heading p { margin:4px 0 0; color:var(--dashboard-muted); font-size:12px; }
+.breadcrumb { color:var(--dashboard-muted); font-size:12px; }
+.breadcrumb span { padding:0 7px; }
+.breadcrumb strong { color:var(--dashboard-ink); }
+.dashboard-actions, .table-tools { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:7px; padding:9px 13px; border:1px solid #d0d7e2; border-radius:8px; background:#fff; color:#344054; font:inherit; font-weight:650; cursor:pointer; white-space:nowrap; }
+.btn:hover { background:#f8fafc; }
+.btn-small { padding:6px 9px; font-size:12px; }
+.btn-primary { background:var(--dashboard-blue); color:#fff; border-color:var(--dashboard-blue); }
+.dashboard-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; margin-bottom:26px; }
+.dashboard-stat, .dashboard-panel { background:#fff; border:1px solid var(--dashboard-line); border-radius:12px; box-shadow:var(--dashboard-shadow); }
+.dashboard-stat { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; padding:20px; }
+.stat-label { color:var(--dashboard-muted); font-size:12px; font-weight:600; }
+.stat-value { margin-top:8px; font-size:29px; font-weight:800; letter-spacing:-1px; }
+.stat-note { margin-top:4px; color:var(--dashboard-muted); font-size:11px; }
+.stat-icon { display:grid; place-items:center; flex:0 0 42px; width:42px; height:42px; border-radius:10px; background:#eaf1ff; color:var(--dashboard-blue); font-size:19px; }
+.stat-icon.green { background:#e8f7ed; color:#15803d; }
+.stat-icon.amber { background:#fff4df; color:#b45309; }
+.dashboard-panel { overflow:hidden; margin-bottom:22px; }
+.panel-heading { display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; padding:19px 22px; border-bottom:1px solid var(--dashboard-line); }
+.panel-heading h2 { margin:0; font-size:15px; }
+.table-selection-options { display:flex; align-items:center; gap:18px; flex-wrap:wrap; padding:18px 22px; }
+.table-selection-options strong, .table-selection-options label { font-size:12px; }
+.table-selection-options label { display:flex; align-items:center; gap:8px; font-weight:600; cursor:pointer; }
+.table-selection-options input { width:15px; height:15px; accent-color:var(--dashboard-blue); }
+.table-panel-heading { padding:16px 18px; }
+.table-title { display:flex; align-items:center; gap:9px; }
+.table-dot { width:8px; height:8px; flex:0 0 8px; border-radius:50%; background:var(--dashboard-blue); }
+.green-dot { background:#16a34a; }
+.dashboard-search { display:flex; align-items:center; gap:8px; }
+.dashboard-search span { margin-right:-28px; z-index:1; color:#98a2b3; pointer-events:none; }
+.dashboard-search input { width:220px; min-width:0; padding:9px 12px 9px 34px; border:1px solid #d0d7e2; border-radius:8px; font:inherit; }
+.dashboard-search input:focus { outline:3px solid #bfdbfe; border-color:var(--dashboard-blue); }
+.table-scroll { width:100%; overflow:auto; }
+.dashboard-page table { width:100%; border-collapse:separate; border-spacing:0; white-space:nowrap; font-size:12px; }
+.dashboard-page th { padding:12px 15px; background:#f8fafc; color:#667085; text-align:left; font-size:10px; font-weight:750; letter-spacing:.45px; text-transform:uppercase; border-bottom:1px solid var(--dashboard-line); }
+.dashboard-page td { padding:12px 15px; vertical-align:middle; border-bottom:1px solid #eef1f5; }
+.dashboard-page tbody tr:hover { background:#fafbfe; }
+.dashboard-page tbody tr:last-child td { border-bottom:0; }
+.id-cell { color:#475467; font-weight:700; }
+.school-name { color:#1d3557; font-weight:700; }
+.status-pill { display:inline-flex; align-items:center; gap:6px; border-radius:999px; padding:4px 8px; font-size:10px; font-weight:750; }
+.status-pill::before { content:""; width:5px; height:5px; border-radius:50%; background:currentColor; }
+.status-pill.active { background:#e8f7ed; color:#16703b; }
+.status-pill.review { background:#fff3db; color:#9a5a00; }
+.status-pill.inactive { background:#feeceb; color:#b42318; }
+.table-footer { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:14px 18px; color:var(--dashboard-muted); font-size:11px; }
+.sample-note { padding:4px 8px; border-radius:999px; background:#fff8e8; color:#946200; }
+.empty-state { padding:35px 18px; text-align:center; color:var(--dashboard-muted); }
+.empty-state strong { display:block; color:var(--dashboard-ink); }
+.prototype-disclaimer { color:var(--dashboard-muted); font-size:11px; }
+@media(max-width:1100px) { .dashboard-page { padding:25px 22px; } .dashboard-stats { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:760px) { .dashboard-page { padding:22px 14px 35px; } .dashboard-heading { flex-direction:column; } .dashboard-heading h1 { font-size:24px; } .dashboard-actions { width:100%; } .dashboard-actions .btn { flex:1; } .dashboard-stat { padding:14px; } .stat-value { font-size:24px; } .stat-icon { width:34px; height:34px; flex-basis:34px; } .panel-heading { padding:15px; } .table-selection-options { padding:15px; gap:12px; } .table-panel-heading { align-items:flex-start; } .table-tools, .dashboard-search { width:100%; } .dashboard-search input { flex:1; width:100%; } .table-footer { padding:12px; } }
+@media(max-width:420px) { .dashboard-stats { gap:10px; } .dashboard-stat { gap:6px; } .stat-label { font-size:11px; } .stat-value { font-size:21px; } .stat-note { font-size:10px; } .stat-icon { display:none; } .dashboard-actions .btn { white-space:normal; } }
